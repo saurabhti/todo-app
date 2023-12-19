@@ -1,0 +1,73 @@
+$danger: #EA5455;
+$primary: #002a5bd3;
+@import "../../node_modules/bootstrap/scss//bootstrap.scss";
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.curspr-pointer{
+    cursor: pointer;
+}
+
+.todo-block{
+    max-width: 550px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    img{
+        max-width: 300px;
+    }
+
+    .list-container{
+
+        label{
+            font-size: 18px;
+            padding-right: 29px;
+            list-style: none;
+            position: relative;
+            cursor: pointer;
+            text-transform: capitalize;
+
+            &::before{
+                content: "\f111";
+                position: absolute;
+                left: -30px;
+                font-family: "Font Awesome 6 Free";
+                font-size: 1.3rem;
+            }
+
+            span{
+                position: absolute;
+                top: 0;
+                right: 5px;
+                line-height: 1;
+                font-weight: 500;
+                font-size: 26px;
+            }
+        }
+
+        .task-done{
+            text-decoration: line-through;
+
+            &::before{
+                content: "\f058";
+                font-weight: 900;
+                color: var(--bs-primary);
+            }
+        }
+    }
+}
+
+.fw-600{
+    font-weight: 600;
+}
